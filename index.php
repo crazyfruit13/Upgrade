@@ -39,7 +39,7 @@
 
         <th scope="col">Username</th>
 
-        <th scope="col">Coin Total</th>
+        <th scope="col">Total Coins</th>
 
         </tr>
             </thead>
