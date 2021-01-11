@@ -28,7 +28,7 @@
         <a class="nav-link" href="#">Admin</a>
       </li>
         </nav>
-    <body style="background-color: #343A40;">
+    <body style="background-color: #343A40">
         <table class="table table-striped table-dark">
         <thead class="thead-dark">
 
