@@ -26,7 +26,7 @@
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin.php">Admin</a>
+        <a class="nav-link" href="Admin.php">Admin</a>
       </li>
         </nav>
     <body style="background-color: #343A40">
