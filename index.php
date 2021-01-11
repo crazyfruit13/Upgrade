@@ -63,6 +63,14 @@
             </tbody>
 </table>
 </body>
+<!-- Footer -->
+<footer class="bg-dark text-center text-lg-start">
+<!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2021 Copyright:
+    <a class="text-light" href="https://mdbootstrap.com/">Arktech Consulting Group, LLC</a>
+    </div>
+</footer>
 </html>
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
