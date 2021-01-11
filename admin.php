@@ -64,7 +64,6 @@
       <input type="username" class="form-control" id="totaluser" placeholder="Username">
     </div>
      <div class="col">
-      <label for="inputPassword4">Password</label>
       <input type="number" class="form-control" id="total" placeholder="New Total">
     </div>
     </div>
