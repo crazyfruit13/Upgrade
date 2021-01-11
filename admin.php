@@ -75,6 +75,9 @@
     </div>
     <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Kowskicoin Total">
   </div>
+      <div class="col-auto my-1">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
     </div>
     </div>
     </div>
