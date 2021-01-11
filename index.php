@@ -29,10 +29,12 @@
       </li>
         </nav>
     <body style="background-color: #a9a9a9;">
-        <table class="table">
+        <table class="table table-dark">
         <thead class="thead-dark">
 
         <tr>
+        
+        <th scope="col">Ranking</th>
 
         <th scope="col">Username</th>
 
@@ -48,7 +50,7 @@
                 while($row = mysqli_fetch_assoc($result)) {
                       echo "<tr>";
                     
-                      echo "<th scope='row'> Ranking:" . $i++ . "</th>";
+                      echo "<th scope='row'> . $i++ . "</th>";
 
                       echo "<td>" . $row['Username'] . "</td>";
 
