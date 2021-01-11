@@ -1,7 +1,8 @@
 <?php
-    require("../data/mysql.php");
+    $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
+ or die('Error connecting to MySQL server.');
 ?>
-<html>"
+<html>
     <body>
     	<h1> Kowskicoin Database </h1>
         <table border='1'>
