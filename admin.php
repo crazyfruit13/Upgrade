@@ -81,7 +81,7 @@ $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
     }
     function add()
     {
-        $query = "insert into Users values 0," .$user.;
+        $query = "insert into Users values (0, '$user')";
         alert("User successfully added!");     
     }
 ?>
@@ -106,7 +106,7 @@ $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
     }
     function adjust()
     {
-       $query = "UPDATE Kowskicoin, Users SET coinval=" .$total.  "WHERE Username =" .$totaluser.;
+       $query = "UPDATE Kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser' ";
        alert("Total successfully adjusted!");    
     }
 ?>
