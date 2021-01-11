@@ -11,6 +11,7 @@
          <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <title> Kowskicoin Database </title>
+        <link rel="icon" href="https://icons.iconarchive.com/icons/ph03nyx/super-mario/256/Retro-Coin-icon.png">
     </head>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
