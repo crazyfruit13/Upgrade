@@ -1,6 +1,6 @@
 <?php
     require("../data/mysql.php");
-?>
+
 echo"<html>"
     echo"<body>"
     	echo"<h1> Kowskicoin Database </h1>"
@@ -28,4 +28,4 @@ echo"<html>"
         echo "</table>";
     echo "</body>"
 echo "</html>"
->?
+?>
