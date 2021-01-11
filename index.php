@@ -14,7 +14,7 @@
     </head>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.php"><img src="https://i.ibb.co/xgLmKr2/Kowskicoin.png"> </a>
+    <a class="navbar-brand" href="index.php"><img src="https://i.ibb.co/xgLmKr2/Kowskicoin.png" width="200" height="100"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,6 +30,7 @@
         </nav>
     <body style="background-color: #a9a9a9;">
         <table class="table-dark">
+        <thead>
 
         <tr>
 
@@ -38,6 +39,8 @@
         <th>Coin Total</th>
 
         </tr>
+            </thead>
+            <tbody>
           <?php
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
                 $result = mysqli_query($db, $query);
@@ -51,6 +54,7 @@
                       echo "</tr>";
                 }     
 ?>
+            </tbody>
 </table>
 </body>
 </html>
