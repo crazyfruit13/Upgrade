@@ -1,0 +1,16 @@
+<?php
+    $db = mysqli_connect('localhost', 'root', '5b900b586bedf85dd74e9060d19433f006db6d75635c3103', 'kowskicoin');
+?>
+<html>
+    <body>
+    	<h1> Kowskicoin Database </h1>
+          <?php
+                $query = "select username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY Users_idUsers;";
+                $result = mysqli_query($db, $query);
+                while($row = mysqli_fetch_assoc($result)) {
+                      // Display your datas on the page
+                }
+          ?>
+    </body>
+</html>
+
