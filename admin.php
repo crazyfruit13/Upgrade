@@ -64,10 +64,17 @@
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
 </svg></label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Kowskicoin Amount">
-      <div class="col-auto my-1">
-      <button type="submit" class="btn btn-primary">Submit</button>
+    <form class="form-inline">
+  <label class="sr-only" for="inlineFormInputName2">Username</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Jane Doe">
+
+  <label class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+  <div class="input-group mb-2 mr-sm-2">
+    <div class="input-group-prepend">
+      <div class="input-group-text">$</div>
+    </div>
+    <input type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Kowskicoin Total">
+  </div>
     </div>
     </div>
     </div>
