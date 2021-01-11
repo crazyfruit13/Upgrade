@@ -28,8 +28,8 @@
         <a class="nav-link" href="#">Admin</a>
       </li>
         </nav>
-    <body style="background-color: #a9a9a9;">
-        <table class="table table-dark">
+    <body style="background-color: #343A40;">
+        <table class="table table-striped table-dark">
         <thead class="thead-dark">
 
         <tr>
@@ -50,7 +50,7 @@
                 while($row = mysqli_fetch_assoc($result)) {
                       echo "<tr>";
                     
-                      echo "<th scope='row'> . $i++ . "</th>";
+                      echo "<th scope='row'>" . $i++ . "</th>";
 
                       echo "<td>" . $row['Username'] . "</td>";
 
