@@ -21,7 +21,7 @@
         <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="admin.php">Admin<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="Admin.php">Admin<span class="sr-only">(current)</span></a>
       </li>
         </nav>
     <body style="background-color: #343A40">
