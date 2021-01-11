@@ -81,11 +81,11 @@ $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
     }
     function add()
     {
-        $query = "insert into Users values (0," .$user. ")";
+        $query = "insert into Users values 0," .$user.;
         alert("User successfully added!");     
     }
 ?>
-<?php
+/* <?php
     $userdel =  $_POST['removeuser'];
     if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['del']))
     {
@@ -96,6 +96,7 @@ $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
         // do stuff     
     }
 ?>
+ */
 <?php
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
@@ -105,7 +106,7 @@ $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
     }
     function adjust()
     {
-       $query = "UPDATE Users SET coinval=" .$total. "WHERE Username=".$totaluser.;
+       $query = "UPDATE Kowskicoin, Users SET coinval=" .$total.  "WHERE Username =" .$totaluser.;
        alert("Total successfully adjusted!");    
     }
 ?>
