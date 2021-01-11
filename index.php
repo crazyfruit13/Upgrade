@@ -34,18 +34,21 @@
 
         <tr>
 
-        <th>Username</th>
+        <th scope="col">Username</th>
 
-        <th>Coin Total</th>
+        <th scope="col">Coin Total</th>
 
         </tr>
             </thead>
             <tbody>
           <?php
+                $i=0
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
                 $result = mysqli_query($db, $query);
                 while($row = mysqli_fetch_assoc($result)) {
                       echo "<tr>";
+                    
+                      echo "<th scope='row'> Ranking:" .$i++. "</th>";
 
                       echo "<td>" . $row['Username'] . "</td>";
 
