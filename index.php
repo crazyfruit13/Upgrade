@@ -14,7 +14,7 @@
     </head>
     <!-- Nav bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="index.php"><img src="https://i.ibb.co/xgLmKr2/Kowskicoin.png"> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,7 +29,6 @@
       </li>
         </nav>
     <body style="background-color: #a9a9a9;">
-    	<img src="https://ibb.co/GMpsfrd" alt="Kowskicoinlogo" width="500" height="600">
         <table class="table-dark">
 
         <tr>
