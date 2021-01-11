@@ -1,10 +1,10 @@
 <?php
     require("../data/mysql.php");
-
-echo"<html>"
-    echo"<body>"
-    	echo"<h1> Kowskicoin Database </h1>"
-        echo "<table border='1'>
+?>
+<html>
+       <body>"
+    	<h1> Kowskicoin Database </h1>
+        <table border='1'>
 
         <tr>
 
@@ -12,8 +12,8 @@ echo"<html>"
 
         <th>Coin Total</th>
 
-        </tr>";
-          <?php
+        </tr>
+                <?php
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
                 $result = mysqli_query($dbase, $query);
                 while($row = mysqli_fetch_assoc($result)) {
