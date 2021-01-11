@@ -44,7 +44,7 @@
             </thead>
             <tbody>
           <?php
-                $i=0;
+                $i=1;
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
                 $result = mysqli_query($db, $query);
                 while($row = mysqli_fetch_assoc($result)) {
