@@ -44,13 +44,13 @@
             </thead>
             <tbody>
           <?php
-                $i=2;
+                $i=1;
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
                 $result = mysqli_query($db, $query);
                 while($row = mysqli_fetch_assoc($result)) {
                       echo "<tr>";
                     
-                      echo "<th scope='row'>" . $i++ . "</th>";
+                      echo "<th scope='row'>" . ++$i . "</th>";
 
                       echo "<td>" . $row['Username'] . "</td>";
 
