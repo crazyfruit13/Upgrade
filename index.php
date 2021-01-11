@@ -16,7 +16,7 @@
         </tr>
           <?php
                 $query = "select Username,coinval FROM Users, Kowskicoin WHERE Users_idUsers = idUsers ORDER BY coinval DESC;";
-                $result = mysqli_query($dbase, $query);
+                $result = mysqli_query($db, $query);
                 while($row = mysqli_fetch_assoc($result)) {
                       echo "<tr>";
 
