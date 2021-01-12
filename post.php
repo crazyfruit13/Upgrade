@@ -1,15 +1,19 @@
   <?php
   function val() {
-     echo "<script type='text/javascript'>alert(User successfully added!);</script>";
+     $message = "Func val";
+     echo "<script type='text/javascript'>alert('$message');</script>";
      if (!empty($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
-     echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
+     $message = "Total successfully adjusted!";
+     echo "<script type='text/javascript'>alert('$message');</script>";
      }elseif (!empty($userdel)) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
-     echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
+     $message = "User successfully adjusted!";
+     echo "<script type='text/javascript'>alert('$message');</script>";
     }elseif (!empty($user)) {
      $result = real_query("insert Users values (0, '$user')");
-     echo "<script type='text/javascript'>alert(User successfully added!);</script>";
+     $message = "User successfully added!";
+     echo "<script type='text/javascript'>alert('$message');</script>";
      
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
