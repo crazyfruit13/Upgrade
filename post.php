@@ -2,6 +2,18 @@
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
 
+ function adjusttotal() {
+     $query = $mysqli->query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
+     alert("Total successfully adjusted!");
+ }
+ function deluser() {
+     $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
+     alert("User successfully deleted!");
+ }
+ function adduser() {
+     $query = $mysqli->query("insert Users values (0, '$user')");
+     alert("User successfully added!"); 
+ }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
@@ -19,16 +31,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } 
  }
  
- function adjusttotal() {
-     $query = $mysqli->query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
-     alert("Total successfully adjusted!");
- }
- function deluser() {
-     $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
-     alert("User successfully deleted!");
- }
- function adduser() {
-     $query = $mysqli->query("insert Users values (0, '$user')");
-     alert("User successfully added!"); 
- }
  ?>
