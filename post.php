@@ -9,18 +9,18 @@ if  (isset($_POST['submit'] ) ) {
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    alert($user, $userdel, $totaluser, $total)
+    echo 'alert('$user, $userdel, $totaluser, $total')'
     if (isset($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
-     alert("Total successfully adjusted!");
+     echo 'alert("Total successfully adjusted!")';
     }elseif (isset($userdel)) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
-     alert("User successfully deleted!");
+     echo 'alert("User successfully deleted!")';
     }elseif (isset($user)) {
      $result = real_query("insert Users values (0, '$user')");
-     alert("User successfully added!");
+     echo 'alert("User successfully added!")';
     }else {
-        alert('Please select an option!');
+        echo 'alert('Please select an option!')';
     } 
  }
  return $result == true;
