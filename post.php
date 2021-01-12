@@ -1,9 +1,8 @@
   <?php
   function val() {
-    if (!empty($_POST['total'])) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
-    }elseif (!empty($_POST['removeuser'])) {
+     if (!empty($_POST['removeuser'])) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
     }elseif (!empty($_POST['total'])) {
