@@ -7,7 +7,7 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    if (!empty($total)) {
+    if (is_numeric($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
     }elseif (is_string($userdel)) {
@@ -24,6 +24,3 @@
  return $result == true;
  mysqli_close($db);
  ?>
-<html>
-  <p> test </p>
-</html>
