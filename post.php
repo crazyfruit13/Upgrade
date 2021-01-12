@@ -24,8 +24,8 @@
  return $result == true;
  mysqli_close($db);
  ?>
-<html>
-  <body>
-    <h1> "Post Successful." </h1>
-  </body>
-</html>
+echo "<html>"
+  echo "<body>"
+    echo "<h1>'Post Successful.'</h1>"
+  echo "</body>"
+echo "</html>"
