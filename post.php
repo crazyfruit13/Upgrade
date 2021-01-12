@@ -9,6 +9,7 @@ if  (isset($_POST['submit'] ) ) {
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
+    alert($user, $userdel, $totaluser, $total)
     if (isset($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      alert("Total successfully adjusted!");
