@@ -7,20 +7,23 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    $checksum = 1;
-     }if (!empty($checksum)) {
+    val();
+ }
+   function val() {
+    if (!empty($_POST['total'])) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
-    }if (!empty($_POST['removeuser'])) {
+    }elseif (!empty($_POST['removeuser'])) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
-    }if (!empty($_POST['total'])) {
+    }elseif (!empty($_POST['total'])) {
      $result = real_query("insert Users values (0, '$user')");
      echo "<script type='text/javascript'>alert(User successfully added!);</script>";
      
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
-    } 
+    }
+  }
  return $result == true;
  mysqli_close($db);
 
