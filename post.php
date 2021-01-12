@@ -8,6 +8,7 @@
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
     $checksum = 1;
+    echo "<script type='text/javascript'>alert('$total, $totaluser');</script>";
     
     if ($checksum = 1) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
