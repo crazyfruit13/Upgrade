@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
   function adduser($user) {
-        global $conn
+        global $conn;
         $sql = "insert into Users values (0," .$user.")";
         if ($conn->query($sql) === TRUE) {
         $message = "User successfully adjusted!";
@@ -22,7 +22,7 @@ if ($conn->connect_error) {
  }
  
   function deluser($userdel) {
-       global $conn
+       global $conn;
        $sql = "DELETE from kowskicoin WHERE Username=" .$userdel;
        if ($conn->query($sql) === TRUE) {
         $message = "User successfully deleted!";
@@ -32,7 +32,7 @@ if ($conn->connect_error) {
   }
 }
   function adjust($total, $totaluser) {
-    global $conn
+    global $conn;
      $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser;
      if ($conn->query($sql) === TRUE) {
      $message = "Total successfully adjusted!";
