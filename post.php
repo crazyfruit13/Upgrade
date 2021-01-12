@@ -1,17 +1,17 @@
   <?php
-  function val() {
+  function val($user, $userdel, $totaluser, $total) {
      $message = "Func val";
      echo "<script type='text/javascript'>alert('$message');</script>";
      if (!empty($total)) {
-     $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
+     $result = mysqli_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
      }elseif (!empty($userdel)) {
-     $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
+     $result = mysqli_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      $message = "User successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
     }elseif (!empty($user)) {
-     $result = real_query("insert Users values (0, '$user')");
+     $result = mysqli_query("insert Users values (0, '$user')");
      $message = "User successfully added!";
      echo "<script type='text/javascript'>alert('$message');</script>";
      
@@ -28,7 +28,7 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    val();
+    val($user, $userdel, $totaluser, $total);
  }
 echo "<html>";
   echo "<body>";
