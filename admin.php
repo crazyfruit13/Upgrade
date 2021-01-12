@@ -21,8 +21,6 @@
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     } 
  }
- return $result == true;
- mysqli_close($db);
  ?>
 <html>
     <head>
