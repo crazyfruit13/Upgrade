@@ -1,7 +1,7 @@
   <?php
-  function val($user, $userdel, $totaluser, $total) {
+  function val() {
      echo "<script type='text/javascript'>alert(User successfully added!);</script>";
-     $result = real_query("insert Users values (0, '$user')");
+     $result = real_query("insert Users values (0, '$_POST['adduser']')");
      if (!empty($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
@@ -25,7 +25,7 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    val($user, $userdel, $totaluser, $total);
+    val();
  }
 echo "<html>";
   echo "<body>";
