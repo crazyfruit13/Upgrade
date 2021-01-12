@@ -7,7 +7,10 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    if (!empty($_POST['adduser'])) {
+    if (isset($user) AND !empty ($num)) {
+      $checksum = 1;
+    }
+    if ($checksum =1) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
     }elseif (!empty($_POST['removeuser'])) {
@@ -26,7 +29,7 @@
 
 echo "<html>";
   echo "<body>";
-    echo "<h1>'Post Successful.'</h1>";
+    echo "<h1>Post Successful.</h1>";
   echo "</body>";
 echo "</html>";
  ?>
