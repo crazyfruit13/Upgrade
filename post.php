@@ -7,7 +7,7 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    if (isset($user)) {
+    if (isset($total)) {
       $checksum = 1;
     }
     if ($checksum = 1) {
