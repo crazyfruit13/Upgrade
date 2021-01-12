@@ -38,7 +38,7 @@
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data">
 </form>
-     <div>
+    /* <div>
       <h1> Remove User</h1> 
       <form action="post.php" method="post">
       <div class="form-group row">
@@ -51,7 +51,7 @@
     </div>
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data">
-</form>
+*/ </form>
     <div>
       <h1> Adjust Kowskicoins</h1>
        <form action="post.php" method="post">
