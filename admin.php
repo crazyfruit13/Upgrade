@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = $mysqli->query("UPDATE Kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser')";
         alert("Total successfully adjusted!"); 
     }elseif (isset($userdel) {
-        $query = $mysqli->query("DELETE from Kowskicoin WHERE Username= '$userdel' ");
+        $query = $mysqli->query("DELETE from Kowskicoin WHERE Username= '$userdel')");
         alert("User successfully deleted!"); 
     }elseif (isset($user) {
         $query = $mysqli->query("insert Users values (0, '$user')");
