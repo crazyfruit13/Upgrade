@@ -25,6 +25,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  return $result == true;
  mysqli_close($db);
  ?>
-<html>
-    <meta http-equiv="refresh" content="time; URL=index.php" />
-</html>
+
