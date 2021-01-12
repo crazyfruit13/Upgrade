@@ -10,12 +10,12 @@
     if (!empty($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
-    }elseif (!empty($userdel)) {
+    }elseif (is_string($userdel)) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
-    }elseif (!empty($user)) {
-     echo "<script type='text/javascript'>alert(User successfully added!);</script>";
+    }elseif (is_string($user)) {
      $result = real_query("insert Users values (0, '$user')");
+     echo "<script type='text/javascript'>alert(User successfully added!);</script>";
      
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
