@@ -74,14 +74,14 @@
 </form>
     </body>
 <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
     if (isset($total)) {
         $query = "UPDATE Kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser' ";
-       alert("Total successfully adjusted!"); 
+        alert("Total successfully adjusted!"); 
     }elseif (isset($userdel) {
         $query = "DELETE from Kowskicoin WHERE Username= '$userdel' ";
         alert("User successfully deleted!"); 
@@ -91,20 +91,8 @@
     }else {
         alert('Please select an option!');
     }
-             }
+ }
 ?>
-/* <?php
-    if ($_SERVER["REQUEST_METHOD"] == "POST") 
-        
-    {
-        del();
-    }
-    function del()
-    {
-        // do stuff     
-    }
-?>
- */
 <!-- Footer -->
 <footer class="bg-dark text-center text-lg-start">
 <!-- Copyright -->
