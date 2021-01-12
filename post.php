@@ -1,9 +1,8 @@
   <?php
-require 'admin.php';
 
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
-
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
@@ -21,10 +20,9 @@ require 'admin.php';
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     } 
-
+ }
  return $result == true;
  mysqli_close($db);
  ?>
 <html>
-  <p> test </p>
 </html>
