@@ -37,7 +37,7 @@
       <input type="text" class="form-control" id="adduser" placeholder="Username">
     </div>
     </div>
-  <input type="submit" class="btn btn-info">
+  <input type="submit" class="btn btn-info" enctype="multipart/form-data">
 </form>
      <div>
       <h1> Remove User</h1> 
@@ -51,7 +51,7 @@
       <input type="text" class="form-control" id="removeuser" placeholder="Username">
     </div>
     </div>
-  <input type="submit" class="btn btn-info">
+  <input type="submit" class="btn btn-info" enctype="multipart/form-data">
 </form>
     <div>
       <h1> Adjust Kowskicoins</h1>
@@ -67,7 +67,7 @@
       <input type="number" class="form-control" id="total" placeholder="New Total">
     </div>
     </div>
-  <input type="submit" class="btn btn-info"> 
+  <input type="submit" class="btn btn-info" enctype="multipart/form-data"> 
 </form>
     </body> 
 <!-- Footer -->
