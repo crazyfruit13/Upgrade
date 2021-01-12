@@ -25,4 +25,6 @@ require 'admin.php';
  return $result == true;
  mysqli_close($db);
  ?>
-
+<html>
+  <p> test </p>
+</html>
