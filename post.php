@@ -33,7 +33,8 @@ if ($conn->connect_error) {
 }
   function adjust($total, $totaluser) {
     global $conn;
-     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" '.$totaluser';
+    $totaluser = 
+     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser;
      if ($conn->query($sql) === TRUE) {
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
