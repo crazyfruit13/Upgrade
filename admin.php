@@ -57,7 +57,7 @@
   <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
 </svg></label>
     <div class="col">
-      <input type="text" class="form-control" id="adduser" placeholder="Username">
+      <input type="text" class="form-control" name="adduser" placeholder="Username">
     </div>
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data">
@@ -71,7 +71,7 @@
   <path fill-rule="evenodd" d="M12.146 5.146a.5.5 0 0 1 .708 0L14 6.293l1.146-1.147a.5.5 0 0 1 .708.708L14.707 7l1.147 1.146a.5.5 0 0 1-.708.708L14 7.707l-1.146 1.147a.5.5 0 0 1-.708-.708L13.293 7l-1.147-1.146a.5.5 0 0 1 0-.708z"/>
 </svg></label>
     <div class="col">
-      <input type="text" class="form-control" id="removeuser" placeholder="Username">
+      <input type="text" class="form-control" name="removeuser" placeholder="Username">
     </div>
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data">
@@ -84,10 +84,10 @@
   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
 </svg></label>
     <div class="col">
-      <input type="text" class="form-control" id="totaluser" placeholder="Username">
+      <input type="text" class="form-control" name="totaluser" placeholder="Username">
     </div>
      <div class="col">
-      <input type="number" class="form-control" id="total" placeholder="New Total">
+      <input type="number" class="form-control" name="total" placeholder="New Total">
     </div>
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data"> 
