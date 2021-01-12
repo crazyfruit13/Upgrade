@@ -2,10 +2,12 @@
   function val($user, $userdel, $totaluser, $total) {
      if (!empty($total)) {
       if mysqli_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'") === TRUE) {
-        printf("coins set.\n");
+        $message = "Total successfully adjusted!";
+        echo "<script type='text/javascript'>alert('$message');</script>";
       }
-     $message = "Total successfully adjusted!";
-     echo "<script type='text/javascript'>alert('$message');</script>";
+      else {
+        printf("Error: %s\n", $mysqli->error);
+      }
      }elseif (!empty($userdel)) {
      $result = mysqli_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      $message = "User successfully adjusted!";
