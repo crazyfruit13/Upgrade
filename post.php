@@ -12,7 +12,8 @@ if ($conn->connect_error) {
 }
   function adduser($user) {
         global $conn;
-        $sql = "insert into Users (idUsers, Username) values (0," '.$user.'")";
+        public function __toString($user)
+        $sql = "insert into Users (idUsers, Username) values (0," .$user.")";
         if ($conn->query($sql) === TRUE) {
         $message = "User successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -23,7 +24,8 @@ if ($conn->connect_error) {
  
   function deluser($userdel) {
        global $conn;
-       $sql = "DELETE from kowskicoin WHERE Username=" '.$userdel';
+       public function __toString($userdel)
+       $sql = "DELETE from kowskicoin WHERE Username=" .$userdel;
        if ($conn->query($sql) === TRUE) {
         $message = "User successfully deleted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -33,7 +35,8 @@ if ($conn->connect_error) {
 }
   function adjust($total, $totaluser) {
     global $conn;
-     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" '.$totaluser';
+    public function __toString($totaluser)
+     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser;
      if ($conn->query($sql) === TRUE) {
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
