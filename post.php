@@ -11,7 +11,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
   function adduser($user) {
-        $sql = "insert into Users values (0," .$user.")"
+        $sql = "insert into Users values (0," .$user.")";
         if ($conn->query($sql) === TRUE) {
         $message = "User successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -21,7 +21,7 @@ if ($conn->connect_error) {
  }
  
   function deluser($userdel) {
-       $sql = "DELETE from kowskicoin WHERE Username=" .$userdel
+       $sql = "DELETE from kowskicoin WHERE Username=" .$userdel;
        if ($conn->query($sql) === TRUE) {
         $message = "User successfully deleted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
@@ -30,7 +30,7 @@ if ($conn->connect_error) {
   }
 }
   function adjust($total, $totaluser) {
-     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser
+     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser;
      if ($conn->query($sql) === TRUE) {
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
