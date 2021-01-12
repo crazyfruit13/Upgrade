@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
         alert("User successfully deleted!"); 
     }elseif (isset($user)) {
-        $query = $mysqli->query("insert Users values (0, '$user'"));
+        $query = $mysqli->query("insert Users values (0, '$user')");
         alert("User successfully added!"); 
     }else {
         alert('Please select an option!');
