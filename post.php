@@ -1,7 +1,7 @@
   <?php
   function val($user, $userdel, $totaluser, $total) {
      if (!empty($total)) {
-      if (mysqli_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username =" $totaluser ") === TRUE) {
+      if (mysqli_query("UPDATE kowskicoin, Users SET coinval=" $total "WHERE Username =" $totaluser ") === TRUE) {
         $message = "Total successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
