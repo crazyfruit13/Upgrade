@@ -23,7 +23,7 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    val($_POST['adduser'], $_POST['removeuser'], $_POST['totaluser'], $_POST['total']);
+    val($user, $userdel, $totaluser, $total);
  }
 echo "<html>";
   echo "<body>";
