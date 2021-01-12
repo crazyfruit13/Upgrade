@@ -4,10 +4,10 @@ require 'admin.php';
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
 
-    $user =  $_POST['adduser'];
-    $userdel =  $_POST['removeuser'];
-    $totaluser =  $_POST['totaluser'];
-    $total =  $_POST['total'];
+    $user =  $_GET['adduser'];
+    $userdel =  $_GET['removeuser'];
+    $totaluser =  $_GET['totaluser'];
+    $total =  $_GET['total'];
     echo "<script type='text/javascript'>alert('$user, $userdel, $totaluser, $total');</script>";
     if (isset($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
