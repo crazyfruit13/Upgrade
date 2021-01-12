@@ -1,9 +1,9 @@
   <?php
   function val($user, $userdel, $totaluser, $total) {
-     $message = "Func val";
-     echo "<script type='text/javascript'>alert('$message');</script>";
      if (!empty($total)) {
-     $result = mysqli_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
+      if mysqli_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'") === TRUE) {
+        printf("coins set.\n");
+      }
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
      }elseif (!empty($userdel)) {
