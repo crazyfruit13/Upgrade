@@ -1,5 +1,4 @@
   <?php
-require 'admin.php';
 
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
