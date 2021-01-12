@@ -1,7 +1,6 @@
   <?php
   function val() {
      echo "<script type='text/javascript'>alert(User successfully added!);</script>";
-     $result = real_query("insert Users values (0, '$_POST['adduser']')");
      if (!empty($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
