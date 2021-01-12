@@ -8,9 +8,8 @@
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
     $checksum = 1;
-    echo "<script type='text/javascript'>alert('$total, $totaluser');</script>";
     
-    if ($checksum = 1) {
+    if (!empty($checksum)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
     }elseif (!empty($_POST['removeuser'])) {
