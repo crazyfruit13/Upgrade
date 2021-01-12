@@ -1,7 +1,24 @@
 <?php
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
-?>           
+?>     
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user =  $_POST['adduser'];
+    $userdel =  $_POST['removeuser'];
+    $totaluser =  $_POST['totaluser'];
+    $total =  $_POST['total'];
+    if (isset($total)) {
+        adustotal(); 
+    }elseif (isset($userdel)) {
+        deluser();
+    }elseif (isset($user)) {
+        adduser();
+    }else {
+        alert('Please select an option!');
+    } 
+ }
+ ?> 
 <html>
     <head>
          <!-- Required meta tags -->
@@ -83,25 +100,19 @@
 </footer>
 </html>
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user =  $_POST['adduser'];
-    $userdel =  $_POST['removeuser'];
-    $totaluser =  $_POST['totaluser'];
-    $total =  $_POST['total'];
-    if (isset($total)) {
-        $query = $mysqli->query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
-        alert("Total successfully adjusted!"); 
-    }elseif (isset($userdel)) {
-        $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
-        alert("User successfully deleted!"); 
-    }elseif (isset($user)) {
-        $query = $mysqli->query("insert Users values (0, '$user')");
-        alert("User successfully added!"); 
-    }else {
-        alert('Please select an option!');
-    } 
+ function adjusttotal() {
+     $query = $mysqli->query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
+     alert("Total successfully adjusted!");
  }
- ?> 
+ function deluser() {
+     $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
+     alert("User successfully deleted!");
+ }
+ function adduser() {
+     $query = $mysqli->query("insert Users values (0, '$user')");
+     alert("User successfully added!"); 
+ }
+ ?>
 <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
