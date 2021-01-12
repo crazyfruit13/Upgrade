@@ -1,4 +1,30 @@
- 
+  <?php
+require 'admin.php';
+
+    $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
+ or die('Error connecting to MySQL server.');
+
+    $user =  $_POST['adduser'];
+    $userdel =  $_POST['removeuser'];
+    $totaluser =  $_POST['totaluser'];
+    $total =  $_POST['total'];
+    echo "<script type='text/javascript'>alert('$user, $userdel, $totaluser, $total');</script>";
+    if (isset($total)) {
+     $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
+     echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
+    }elseif (isset($userdel)) {
+     $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
+     echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
+    }elseif (isset($user)) {
+     $result = real_query("insert Users values (0, '$user')");
+     echo "<script type='text/javascript'>alert(User successfully added!);</script>";
+    }else {
+        echo "<script type='text/javascript'>alert(Please select an option!);</script>";
+    } 
+
+ return $result == true;
+ mysqli_close($db);
+ ?>
 <html>
     <head>
          <!-- Required meta tags -->
@@ -27,7 +53,7 @@
     <body style="background-color: #343A40">
     <div>
       <h1> Add User</h1>
-      <form action="post.php" method="post">
+      <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
       <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-plus" viewBox="0 0 16 16">
   <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
@@ -41,7 +67,7 @@
 </form>
      <div>
       <h1> Remove User</h1> 
-      <form action="post.php" method="post">
+      <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
       <div class="form-group row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-x" viewBox="0 0 16 16">
   <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
@@ -55,7 +81,7 @@
 </form>
     <div>
       <h1> Adjust Kowskicoins</h1>
-       <form action="post.php" method="post">
+       <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
        <div class="form-row">
     <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
