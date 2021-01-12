@@ -1,7 +1,7 @@
   <?php
   function val($user, $userdel, $totaluser, $total) {
      if (!empty($total)) {
-      if (mysqli_query("UPDATE kowskicoin, Users SET coinval=" $total "WHERE Username =" $totaluser ") === TRUE) {
+      if (mysqli_query("UPDATE kowskicoin, Users SET coinval=" $total "WHERE Username =" $totaluser) === TRUE) {
         $message = "Total successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
@@ -9,7 +9,7 @@
         printf("Error: %s\n", $mysqli->error);
       }
      }elseif (!empty($userdel)) {
-       if (mysqli_query("DELETE from kowskicoin WHERE Username=" $userdel") === TRUE) {
+       if (mysqli_query("DELETE from kowskicoin WHERE Username=" $userdel) === TRUE) {
         $message = "User successfully deleted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
@@ -17,7 +17,7 @@
         printf("Error: %s\n", $mysqli->error);
       }
     }elseif (!empty($user)) {
-       if (mysqli_query("insert Users values (0," $user")) === TRUE) {
+       if (mysqli_query("insert Users values (0," $user)) === TRUE) {
         $message = "User successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
