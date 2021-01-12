@@ -33,7 +33,7 @@
   <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
 </svg></label>
     <div class="col">
-      <input type="text" class="form-control" name="adduser" placeholder="Username">
+      <input type="text" class="form-control" name='adduser' placeholder="Username">
     </div>
     </div>
   <input type="submit" class="btn btn-info" enctype="multipart/form-data">
