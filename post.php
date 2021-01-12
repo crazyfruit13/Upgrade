@@ -1,7 +1,7 @@
   <?php
   function val($user, $userdel, $totaluser, $total) {
      if (!empty($total)) {
-      if (mysqli_query("UPDATE kowskicoin, Users SET coinval=" $total "WHERE Username =" $totaluser) === TRUE) {
+      if (mysqli->query("UPDATE kowskicoin, Users SET coinval=" $total "WHERE Username =" $totaluser) === TRUE) {
         $message = "Total successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
@@ -9,7 +9,7 @@
         printf("Error: %s\n", $mysqli->error);
       }
      }elseif (!empty($userdel)) {
-       if (mysqli_query("DELETE from kowskicoin WHERE Username=" $userdel) === TRUE) {
+       if (mysqli->query("DELETE from kowskicoin WHERE Username=" $userdel) === TRUE) {
         $message = "User successfully deleted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
@@ -17,7 +17,7 @@
         printf("Error: %s\n", $mysqli->error);
       }
     }elseif (!empty($user)) {
-       if (mysqli_query("insert Users values (0," $user)) === TRUE) {
+       if (mysqli->query("insert Users values (0," $user)) === TRUE) {
         $message = "User successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }
@@ -28,7 +28,7 @@
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     }
      return $result == true;
-     mysqli_close($db);
+     mysqli->close($db);
   }
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
