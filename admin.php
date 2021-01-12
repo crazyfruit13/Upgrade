@@ -64,7 +64,7 @@
   <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
 </svg></label>
     <div class="col">
-      <input type="username" class="form-control" id="totaluser" placeholder="Username">
+      <input type="text" class="form-control" id="totaluser" placeholder="Username">
     </div>
      <div class="col">
       <input type="number" class="form-control" id="total" placeholder="New Total">
@@ -75,7 +75,7 @@
     </body>
 <?php
     $user =  $_POST['adduser'];
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['add']))
+    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['adduser']))
     {
         add();
     }
@@ -87,7 +87,7 @@
 ?>
 /* <?php
     $userdel =  $_POST['removeuser'];
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['del']))
+    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['removeuser']))
     {
         del();
     }
@@ -100,7 +100,7 @@
 <?php
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['adjust']))
+    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['total']))
     {
         adjust();
     }
