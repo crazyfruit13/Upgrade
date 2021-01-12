@@ -11,10 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($total)) {
         $query = $mysqli->query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
         alert("Total successfully adjusted!"); 
-    }elseif (isset($userdel) {
+    }elseif (isset($userdel)) {
         $query = $mysqli->query("DELETE from kowskicoin WHERE Username= '$userdel'");
         alert("User successfully deleted!"); 
-    }elseif (isset($user) {
+    }elseif (isset($user)) {
         $query = $mysqli->query("insert Users values (0, '$user'"));
         alert("User successfully added!"); 
     }else {
