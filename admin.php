@@ -19,8 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         alert("User successfully added!"); 
     }else {
         alert('Please select an option!');
-    }
- } 
+    } 
  }
  ?>            
 <html>
