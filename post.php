@@ -7,14 +7,13 @@
     $userdel =  $_POST['removeuser'];
     $totaluser =  $_POST['totaluser'];
     $total =  $_POST['total'];
-    echo "<script type='text/javascript'>alert('$user, $userdel, $totaluser, $total');</script>";
-    if (isset($total)) {
+    if (!empty($total)) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
-    }elseif (isset($userdel)) {
+    }elseif (!empty($userdel)) {
      $result = real_query("DELETE from kowskicoin WHERE Username= '$userdel'");
      echo "<script type='text/javascript'>alert(User successfully deleted!);</script>";
-    }elseif (isset($user)) {
+    }elseif (!empty($user)) {
      $result = real_query("insert Users values (0, '$user')");
      echo "<script type='text/javascript'>alert(User successfully added!);</script>";
     }else {
