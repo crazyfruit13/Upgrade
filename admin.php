@@ -73,7 +73,7 @@
   <input type="submit" class="btn btn-info"> 
 </form>
     </body>
-<?php
+/* <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
     $userdel =  $_POST['removeuser'];
@@ -91,8 +91,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }else {
         alert('Please select an option!');
     }
- }
-?>
+ } 
+?> */
 <!-- Footer -->
 <footer class="bg-dark text-center text-lg-start">
 <!-- Copyright -->
