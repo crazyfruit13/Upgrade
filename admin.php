@@ -74,21 +74,28 @@
 </form>
     </body>
 <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
-    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['adduser']))
-    {
-        echo "Variable 'a' is set.<br>";
-        add();
-    }
-    function add()
-    {
+    $userdel =  $_POST['removeuser'];
+    $totaluser =  $_POST['totaluser'];
+    $total =  $_POST['total'];
+    if (isset($total)) {
+        $query = "UPDATE Kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser' ";
+       alert("Total successfully adjusted!"); 
+    }elseif (isset($userdel) {
+        $query = "DELETE from Kowskicoin WHERE Username= '$userdel' ";
+        alert("User successfully deleted!"); 
+    }elseif (isset($user) {
         $query = "insert into Users values (0, '$user')";
-        alert("User successfully added!");     
+        alert("User successfully added!"); 
+    }else {
+        alert('Please select an option!');
     }
+             }
 ?>
 /* <?php
-    $userdel =  $_POST['removeuser'];
-    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['removeuser']))
+    if ($_SERVER["REQUEST_METHOD"] == "POST") 
+        
     {
         del();
     }
@@ -98,20 +105,6 @@
     }
 ?>
  */
-<?php
-    $totaluser =  $_POST['totaluser'];
-    $total =  $_POST['total'];
-    if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['total']))
-    {
-        echo "Variable 'a' is set.<br>";
-        adjust();
-    }
-    function adjust()
-    {
-       $query = "UPDATE Kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser' ";
-       alert("Total successfully adjusted!");    
-    }
-?>
 <!-- Footer -->
 <footer class="bg-dark text-center text-lg-start">
 <!-- Copyright -->
