@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         alert('Please select an option!');
     }
  } 
+ }
  ?>            
 <html>
     <head>
