@@ -1,17 +1,28 @@
-    <?php
-      $mysqli = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
- or die('Error connecting to MySQL server.');
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "E68}eb%.@>8+LNMA";
+$dbname = "kowskicoin";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
   function adduser($user) {
-        if ($mysqli->query("insert Users values (0," .$user.")") === TRUE) {
+        $sql = "insert into Users values (0," .$user.")"
+        if ($conn->query($sql) === TRUE) {
         $message = "User successfully adjusted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }else {
-        printf("Error: %s\n", $mysqli->error);
+        printf("Error: %s\n", $conn->error);
       }  
  }
  
   function deluser($userdel) {
-       if ($mysqli->query("DELETE from kowskicoin WHERE Username=" .$userdel) === TRUE) {
+       $sql = "DELETE from kowskicoin WHERE Username=" .$userdel
+       if ($conn->query($sql) === TRUE) {
         $message = "User successfully deleted!";
         echo "<script type='text/javascript'>alert('$message');</script>";
       }else {
@@ -19,7 +30,8 @@
   }
 }
   function adjust($total, $totaluser) {
-     if ($mysqli->query("UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser) === TRUE) {
+     $sql = "UPDATE kowskicoin, Users SET coinval=" .$total. "WHERE Username =" .$totaluser
+     if ($conn->query($sql) === TRUE) {
      $message = "Total successfully adjusted!";
      echo "<script type='text/javascript'>alert('$message');</script>";
       }else {
@@ -36,8 +48,6 @@
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     }
-     return $result == true;
-     $mysqli->close($mysqli);
   }
  if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user =  $_POST['adduser'];
@@ -51,4 +61,5 @@ echo "<html>";
     echo "<h1>Post Successful.</h1>";
   echo "</body>";
 echo "</html>";
+ $conn->close();
  ?>
