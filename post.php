@@ -28,11 +28,11 @@
 }
   function val($user, $userdel, $totaluser, $total) {
      if (!empty($total)) {
-       adjust($total, $totaluser)
+       adjust($total, $totaluser);
     }elseif (!empty($userdel)) {
-       deluser($userdel)
+       deluser($userdel);
     }elseif (!empty($user)) {
-       adduser($user)
+       adduser($user);
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     }
