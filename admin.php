@@ -77,6 +77,7 @@
     $user =  $_POST['adduser'];
     if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['adduser']))
     {
+        echo "Variable 'a' is set.<br>";
         add();
     }
     function add()
@@ -102,6 +103,7 @@
     $total =  $_POST['total'];
     if($_SERVER["REQUEST_METHOD"] == "POST" and isset($_POST['total']))
     {
+        echo "Variable 'a' is set.<br>";
         adjust();
     }
     function adjust()
