@@ -109,7 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
      alert("User successfully deleted!");
  }
  function adduser() {
-     $query = $mysqli->query("insert Users values (0, '$user')");
      alert("User successfully added!"); 
  }
  ?>
