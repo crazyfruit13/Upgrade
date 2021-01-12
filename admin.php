@@ -40,7 +40,7 @@
       <input type="text" class="form-control" id="adduser" placeholder="Username">
     </div>
     </div>
-  <button type="submit" class="btn btn-success">Confirm</button>
+  <input type="submit" class="btn btn-info">
 </form>
      <div>
       <h1> Remove User</h1> 
@@ -54,7 +54,7 @@
       <input type="text" class="form-control" id="removeuser" placeholder="Username">
     </div>
     </div>
-  <button type="submit" class="btn btn-danger">Confirm</button>
+  <input type="submit" class="btn btn-info">
 </form>
     <div>
       <h1> Adjust Kowskicoins</h1>
@@ -70,7 +70,7 @@
       <input type="number" class="form-control" id="total" placeholder="New Total">
     </div>
     </div>
-  <button type="submit" class="btn btn-info">Confirm</button>
+  <input type="submit" class="btn btn-info"> 
 </form>
     </body>
 <?php
