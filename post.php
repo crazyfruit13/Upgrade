@@ -1,4 +1,6 @@
 <?php
+require 'admin.php';
+
     $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
  or die('Error connecting to MySQL server.');
 
@@ -22,4 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  }
  return $result == true;
  mysqli_close($db);
- ?>  
+ ?>
+<html>
+    <meta http-equiv="refresh" content="time; URL=index.php" />
+</html>
