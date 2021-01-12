@@ -1,15 +1,5 @@
   <?php
-
-    $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
- or die('Error connecting to MySQL server.');
- if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $user =  $_POST['adduser'];
-    $userdel =  $_POST['removeuser'];
-    $totaluser =  $_POST['totaluser'];
-    $total =  $_POST['total'];
-    val();
- }
-   function val() {
+  function val() {
     if (!empty($_POST['total'])) {
      $result = real_query("UPDATE kowskicoin, Users SET coinval= $total WHERE Username = '$totaluser'");
      echo "<script type='text/javascript'>alert(Total successfully adjusted!);</script>";
@@ -23,10 +13,18 @@
     }else {
         echo "<script type='text/javascript'>alert(Please select an option!);</script>";
     }
+     return $result == true;
+     mysqli_close($db);
   }
- return $result == true;
- mysqli_close($db);
-
+    $db = mysqli_connect('localhost','root','E68}eb%.@>8+LNMA','kowskicoin')
+ or die('Error connecting to MySQL server.');
+ if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $user =  $_POST['adduser'];
+    $userdel =  $_POST['removeuser'];
+    $totaluser =  $_POST['totaluser'];
+    $total =  $_POST['total'];
+    val();
+ }
 echo "<html>";
   echo "<body>";
     echo "<h1>Post Successful.</h1>";
